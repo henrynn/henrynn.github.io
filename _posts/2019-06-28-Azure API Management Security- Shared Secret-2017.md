@@ -20,10 +20,7 @@ tags:								#标签
 
 今天主要介绍 Shared Secret，通过在API Management Gateway inbound request 里设置一个shared secret，后台服务提供者来校验这个secret来防止非法的请求。 前端的客户端不需要做任何改动，通过Azure Portal 来完成设置。
   - 在 API Management -> Named value 增加两个properties
-|  Display Name   |  Values |
-|  ----          | ----    |
-| SSHeaderName   | apiss   |
-| SSHeaderValue  | ******  |
+
   
 |  Display Name   | Values  |
 |  ----  | ----  |
