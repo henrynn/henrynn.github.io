@@ -27,4 +27,36 @@ tags:								#标签
 | SSHeaderName  | apiss |
 | SSHeaderValue  | ***** |
 
+- 在对应的API inbound policy 中增加以下设置：
+<set-header name="{{SSHeaderName}}" exists-action="override">
+    <value>{{SSHeaderValue}}</value>
+</set-header>
 
+- 通过Developer Portal 追踪Request可以看到之前设置的Header 已经添加进去了
+
+"headers": [
+            {
+                "name": "Host",
+                "value": "conferenceapi.azurewebsites.net"
+            },
+            {
+                "name": "apiss",
+                "value": "fabd32e06cae48ddaebb96b7261cab38"
+            },
+            {
+                "name": "Ocp-Apim-Subscription-Key",
+                "value": "b3580fb1d2104e67a7ca6b79f3dd2667"
+            },
+            {
+                "name": "Request-Id",
+                "value": "|09d77070-3fbb-4ef8-94a8-57ef6474fcae.3d48b3dc."
+            },
+            {
+                "name": "Request-Context",
+                "value": "appId=cid-v1:bd4d0747-2b3a-4a0c-8ff9-0d5fdf19acc8"
+            },
+            {
+                "name": "X-Forwarded-For",
+                "value": "40.118.203.215"
+            }
+        ]
