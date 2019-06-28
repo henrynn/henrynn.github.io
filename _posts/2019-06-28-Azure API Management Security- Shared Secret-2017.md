@@ -27,7 +27,7 @@ tags:								#标签
 | SSHeaderName  | apiss |
 | SSHeaderValue  | ***** |
 
-- 在对应的API inbound request policy 中增加以下设置：
+- 在对应的API inbound request policy 中增加以下设置
 ```xml
 <set-header name="{{SSHeaderName}}" exists-action="override">
     <value>{{SSHeaderValue}}</value>
