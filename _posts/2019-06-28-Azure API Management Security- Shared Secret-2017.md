@@ -28,14 +28,12 @@ tags:								#标签
 | SSHeaderValue  | ***** |
 
 - 在对应的API inbound request policy 中增加以下设置：
-```
-<set-header name="{{SSHeaderName}}" exists-action="override">
+```<set-header name="{{SSHeaderName}}" exists-action="override">
     <value>{{SSHeaderValue}}</value>
 </set-header>
 ```
 - 通过Developer Portal 追踪Request可以看到之前设置的Header 已经添加进去了
-```
-"headers": [
+```"headers": [
             {
                 "name": "Host",
                 "value": "conferenceapi.azurewebsites.net"
