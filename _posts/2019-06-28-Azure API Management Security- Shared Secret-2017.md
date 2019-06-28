@@ -34,7 +34,7 @@ tags:								#标签
 </set-header>
 ```
 - 通过Developer Portal 追踪Request可以看到之前设置的Header 已经添加进去了
-```xml
+```json
 "headers": [
             {
                 "name": "Host",
